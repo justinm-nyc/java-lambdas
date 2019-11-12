@@ -34,10 +34,7 @@ public class Main {
     public static void usingLambdasInShortForm(){
         List<Book> books = Books.all();
         Collections.sort(books, Comparator.comparing(Book::getTitle));
-
-        for (Book book: books) {
-            System.out.println(book);
-        }
+        books.forEach(book -> System.out.println(book));
     }
 
     public static void main(String[] args) {
